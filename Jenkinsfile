@@ -4,7 +4,7 @@ pipeline {
     environment {
         AWS_ACCESS_KEY_ID     = credentials('access_key_id')
         AWS_SECRET_ACCESS_KEY = credentials('secret_access_key_id')
-        AWS_SESSION_TOKEN     = credentials('session_token')   // optional
+        //AWS_SESSION_TOKEN     = credentials('session_token')   // optional
         TF_WORKSPACE = "task3"
     }
 
