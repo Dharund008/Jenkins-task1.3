@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     environment {
-        AWS_ACCESS_KEY_ID     = credentials('access_key_id')
-        AWS_SECRET_ACCESS_KEY = credentials('secret_access_key_id')
-        //AWS_SESSION_TOKEN     = credentials('session_token')   // optional
+        AWS_ACCESS_KEY_ID     = credentials('access')
+        AWS_SECRET_ACCESS_KEY = credentials('secret_key_aws')
+        AWS_SESSION_TOKEN     = credentials('token_session')   // optional
         TF_WORKSPACE = "task3"
     }
 
