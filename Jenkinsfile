@@ -30,8 +30,9 @@ pipeline {
                 sh '''
                 terraform --version
                 terraform init
-                echo "Terraform initialized Successfully in branch: ${env.GIT_BRANCH}"
                 '''
+                echo "Terraform initialized Successfully in branch: ${env.GIT_BRANCH}"
+
             }
         }
 
@@ -39,8 +40,8 @@ pipeline {
             steps {
                 sh '''
                 terraform plan -out=tfplan -input=false
-                echo "Terraform plan created Successfully in branch: ${env.GIT_BRANCH}"
                 '''
+                echo "Terraform plan created Successfully in branch: ${env.GIT_BRANCH}"
             }
         }
 
@@ -68,8 +69,8 @@ pipeline {
             steps {
                 sh '''
                 terraform apply -auto-approve tfplan
-                echo "Terraform applied Successfully in branch: ${env.GIT_BRANCH}"
                 '''
+                echo "Terraform applied Successfully in branch: ${env.GIT_BRANCH}"
             }
         }
     }
